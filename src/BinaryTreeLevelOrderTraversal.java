@@ -25,19 +25,16 @@ import java.util.List;
  */
 public class BinaryTreeLevelOrderTraversal {
     public static void main(String args[]) {
-        TreeNode n1 = new TreeNode(2);
-        TreeNode n2 = new TreeNode(3);
-        TreeNode n3 = new TreeNode(3);
-        TreeNode n4 = new TreeNode(4);
-        TreeNode n5 = new TreeNode(5);
-        TreeNode n6 = new TreeNode(5);
+        TreeNode n1 = new TreeNode(3);
+        TreeNode n2 = new TreeNode(9);
+        TreeNode n3 = new TreeNode(20);
+        TreeNode n4 = new TreeNode(15);
+        TreeNode n5 = new TreeNode(7);
         n1.left = n2;
         n1.right = n3;
-        n2.left = n4;
-        n2.right = n5;
-        n3.left = n6;
-        n3.right = null;
-        n4.left = n4.right = n5.left = n5.right = n6.left = n6.right = null;
+        n3.left = n4;
+        n3.right = n5;
+        n2.left = n2.right = n4.left = n4.right = n5.left = n5.right = null;
         BinaryTreeLevelOrderTraversal b = new BinaryTreeLevelOrderTraversal();
         System.out.println("result:" + b.levelOrder(n1));
     }
